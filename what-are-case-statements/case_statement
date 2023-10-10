@@ -16,6 +16,7 @@ case $n in
         echo "Other";;
 esac '
 
+# saves the value to variable name v
 read -p "Enter a value: " v
 
 case $v in

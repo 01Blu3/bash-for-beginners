@@ -14,5 +14,35 @@ check_even () {
 
 number=2344
 
-check_even $number
-echo $mod
+# check_even $number
+# echo $mod
+
+
+# Variables have scope concept
+# All of our previous variables have been global, but now when we add local it will only exist within the function
+check_odd() {
+   local mod=2
+   echo "The value of mod is $mod"
+   echo "The value being checked is "$1" "
+   if [ $(("$1" % $mod)) -ne 0 ] 
+   then
+      echo "The number $1 is odd!";
+   else
+      echo "The number $1 is even!"
+   fi
+}
+
+check_odd 5
+
+check_is_divisible() {
+   echo "Value 1 is: $1"
+   echo "Value 2 is: $2"
+   if [ $(("$1" % "$2")) -eq 0 ]
+   then
+      echo "The number $1 is divisble by $2!";
+   else
+      echo "The number $1 is not divisble by $2!";
+   fi
+}
+
+check_is_divisible 5 5
