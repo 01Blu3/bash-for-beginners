@@ -5,3 +5,8 @@
 for (( i=0; i<5; i=i+1 )); do
     echo "The counter is at: $i"
 done
+
+# Using a traditional for loop
+for ((i=0; i <= 21; i+=3)); do
+    echo "The counter is at: $i"
+done

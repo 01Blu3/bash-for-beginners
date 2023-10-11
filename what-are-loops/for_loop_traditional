@@ -4,7 +4,15 @@
 
 services=("loadbalancer" "virtualmachine" "storage")
 
+# iterate over values in an array
 for i in "${services[@]}"
 do
    echo $i
+done
+
+cloud_providers=("AWS" "Azure" "GCP" "DigitalOcean" "Linode")
+
+for provider in "${cloud_providers[@]}"
+do
+   echo $provider
 done

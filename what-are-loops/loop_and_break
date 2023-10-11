@@ -13,3 +13,15 @@ while true; do
 done
 
 echo "Break happened"
+
+# A script that will receive input 
+
+while true; do
+  read -p "Enter a number between 0 and 10: " n
+  if [[ $n -ge 0 && $n -le 10 ]]; then
+    echo "You entered $n"
+  else
+    echo "You didn't enter a number in range, goodbye."
+    break
+  fi
+done

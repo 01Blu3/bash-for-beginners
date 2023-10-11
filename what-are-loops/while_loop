@@ -8,3 +8,12 @@ while [[ "$counter" -le 10 ]]; do
     counter=$((counter + 1))
 done
 echo "The count has finished."
+
+# A script that displays the even numbers from 0 to 100
+value=0
+while [[ "$value" -le 100 ]]; do
+    echo "Value is : $value"
+    value=$((value + 2))
+done
+
+echo "We have shown the even numbers from 2 to 100"
